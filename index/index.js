@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-12-22 11:10:57
- * @LastEditTime: 2021-01-01 17:55:57
+ * @LastEditTime: 2021-01-01 20:50:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /xccgrid manage system/index/index.js
@@ -17,8 +17,19 @@ var app = new Vue({
         passage_url: '',
         gettime: '',
         gettimeform: '',
+        newsarr: [],
+        userarr: [],
+        table2show: false,
+        warning1show: false
+    },
+    created: function () {
+        //这里是页面加载的时候会执行的东西
+        this.geruserlist()
+
+
     },
     methods: {
+
         menu_index: function () {
             this.which_blue = 0
         },
@@ -127,13 +138,47 @@ var app = new Vue({
                     return str.join("&");
                 }
             }).then((res) => {
-                console.log(res.data);
-
-
+                this.newsarr = res.data
+                console.log(this.newsarr);
+                this.table2show = true
             });
 
+        },
+        geruserlist() {
+            axios({
+                method: 'POST',
+                url: "http://127.0.0.1:8000/info/getuser",
+                data: {
+                    num: 1
+                },
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj) {
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    }
+                    return str.join("&");
+                }
+            }).then((res) => {
+                console.log(res.data);
+                this.userarr = res.data
+                console.log(this.userarr);
+            });
+        },
+        passage_delete() {
+            console.log("删除");
+            this.warning1show = true
+        },
+        delete_confirm() {
+            //已经确定要删除了
+            //下面调用删除函数对这个东西进行删除处理。
+
+        },
+        delete_cancel() {
+            this.warning1show = false
         }
 
 
-    }
+    },
+
 })

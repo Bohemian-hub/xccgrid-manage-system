@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-22 11:05:04
- * @LastEditTime: 2021-01-01 17:35:19
+ * @LastEditTime: 2021-01-01 20:48:34
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /xccgrid manage system/index/index.html
@@ -95,486 +95,27 @@
                                 <th>注册日期</th>
                                 <th>操作</th>
                             </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
+                            <tr v-for="(site,index) in userarr">
+                                <td>{{index+1}}</td>
+                                <td>{{site.fields.name}}</td>
+                                <td>{{site.pk}}</td>
+                                <td>{{site.fields.collegeName}}</td>
+                                <td>{{site.fields.majorName}}</td>
+                                <td>{{site.fields.className}}</td>
+                                <td>{{site.fields.phoneNumber}}</td>
+                                <td>{{site.fields.birthDay}}</td>
+                                <td>{{site.fields.graduationSchool}}</td>
+                                <td>{{site.fields.domicile}}</td>
+                                <td>{{site.fields.email}}</td>
+                                <td>{{site.fields.idNumber}}</td>
+                                <td>{{site.fields.updateTime}}</td>
+                                <td>
+                                    <div class="operate" href="">编辑 </div>
+                                    <div class="operate" href="" @click="passage_delete">删除 </div>
+                                    <div class="operate" href="">更多</div>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>何东</td>
-                                <td>1811030132</td>
-                                <td>信息技术学院</td>
-                                <td>计算机科学与技术</td>
-                                <td>18计科2班</td>
-                                <td>18081239804</td>
-                                <td>2000-05-20</td>
-                                <td>江油市太白中学</td>
-                                <td>四川绵阳</td>
-                                <td>2605191106@qq.com</td>
-                                <td>2612327200005201310</td>
-                                <td>2020-12-08 21:28:32</td>
-                                <td><a href="">编辑 </a><a href="">删除 </a><a href="">更多</a></td>
-                            </tr>
+
 
                         </table>
                     </div>
@@ -620,7 +161,7 @@
                                 <i-button type="primary" @click="">编辑</i-button>
 
                             </div>
-                            <div class="table2">
+                            <div class="table2" v-show="table2show">
                                 <table cellspacing="0">
                                     <tr>
                                         <th>编号</th>
@@ -632,16 +173,17 @@
                                         <th>操作</th>
 
                                     </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>新年快了，立下新年的第一个flog</td>
-                                        <td>新年快了，感谢每一个支持和关注我们的小伙伴</td>
-                                        <td>vsvsavsavsvsvasv</td>
-                                        <td>vdsabnanafab</td>
-                                        <td>18计科vsavasvasvdsvsdv2班</td>
-                                        <td><a href="">编辑 </a><br>
-                                            <a href="">删除 </a><br>
-                                            <a href="">更多</a>
+                                    <tr v-for="site in newsarr">
+                                        <td>{{site.pk}}</td>
+                                        <td>{{site.fields.passage_title}}</td>
+                                        <td>{{site.fields.passage_intro}}</td>
+                                        <td>{{site.fields.passage_photo}}</td>
+                                        <td>{{site.fields.passage_url}}</td>
+                                        <td>{{site.fields.gettimeform}}</td>
+                                        <td>
+                                            <div class="operate" href="">编辑 </div>
+                                            <div class="operate" href="" @click="passage_delete">删除 </div>
+                                            <div class="operate" href="">更多</div>
                                         </td>
                                     </tr>
                                 </table>
@@ -659,6 +201,14 @@
             <div class="bottom">
                 西院格子后台来自松雷网络科技工作室
                 备案号Gb2312
+            </div>
+            <div class="warning1" v-show="warning1show">删除提示框
+                <div class="warning_content">
+                    确定删除此项?
+                </div>
+                <div class="warn_no" @click="delete_cancel">取消</div>
+                <div class="warn_yes" @click="delete_confirm">确定</div>
+
             </div>
         </div>
 
