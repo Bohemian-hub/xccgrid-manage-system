@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-12-22 11:10:57
- * @LastEditTime: 2021-01-01 17:11:40
+ * @LastEditTime: 2021-01-01 17:55:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /xccgrid manage system/index/index.js
@@ -107,6 +107,32 @@ var app = new Vue({
             _this.gettime = '' + yy + mm + dd + hh + mf + ss;
             _this.gettimeform = yy + '-' + mm + '-' + dd + ' ' + hh + ':' + mf + ':' + ss;
         },
+        //获取数据库中的所有已经保存的新闻
+        passage_acquire() {
+
+            console.log("获取");
+            //现在向服务器发送post请求
+            axios({
+                method: 'POST',
+                url: "http://127.0.0.1:8000/passage/get_passage",
+                data: {
+                    num: 1
+                },
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj) {
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    }
+                    return str.join("&");
+                }
+            }).then((res) => {
+                console.log(res.data);
+
+
+            });
+
+        }
 
 
     }

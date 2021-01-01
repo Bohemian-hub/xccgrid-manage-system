@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-22 11:05:04
- * @LastEditTime: 2021-01-01 16:35:52
+ * @LastEditTime: 2021-01-01 17:35:19
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /xccgrid manage system/index/index.html
@@ -608,12 +608,44 @@
                                 <div style="clear: both;"></div>
                                 <div class="edit-menu">
                                     <i-button type="primary" @click="passage_publish">发布</i-button>
+                                    <i-button type="primary" @click="">预览</i-button>
                                 </div>
                             </div>
                         </div>
                         <div class="all_news">
                             <div class="panel_title">所有新闻</div>
-                            <div></div>
+                            <div class="edit-menu">
+                                <i-button type="primary" @click="passage_acquire">获取</i-button>
+                                <i-button type="primary" @click="">删除</i-button>
+                                <i-button type="primary" @click="">编辑</i-button>
+
+                            </div>
+                            <div class="table2">
+                                <table cellspacing="0">
+                                    <tr>
+                                        <th>编号</th>
+                                        <th>标题</th>
+                                        <th>摘要</th>
+                                        <th>图片</th>
+                                        <th>文章链接</th>
+                                        <th>发布时间</th>
+                                        <th>操作</th>
+
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>新年快了，立下新年的第一个flog</td>
+                                        <td>新年快了，感谢每一个支持和关注我们的小伙伴</td>
+                                        <td>vsvsavsavsvsvasv</td>
+                                        <td>vdsabnanafab</td>
+                                        <td>18计科vsavasvasvdsvsdv2班</td>
+                                        <td><a href="">编辑 </a><br>
+                                            <a href="">删除 </a><br>
+                                            <a href="">更多</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
 
