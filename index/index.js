@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-12-22 11:10:57
- * @LastEditTime: 2021-01-01 16:47:57
+ * @LastEditTime: 2021-01-01 17:11:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /xccgrid manage system/index/index.js
@@ -74,6 +74,13 @@ var app = new Vue({
                 }
             }).then((res) => {
                 console.log(res.data);
+                if (res.data.loginnum == 200) {
+                    alert("发布成功")
+                } else {
+                    alert("发布失败，请联系大佬！QQ：2605191106")
+
+                }
+
             });
         },
 
