@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-22 11:05:04
- * @LastEditTime: 2021-01-01 20:48:34
+ * @LastEditTime: 2021-01-02 13:07:42
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /xccgrid manage system/index/index.html
@@ -77,7 +77,7 @@
                         <input class="input_frame" type="text" placeholder="eg:张三">
                         <div class="matching">匹配</div>
                     </div>
-                    <div class="table">
+                    <div class="table1">
                         <table cellspacing="0">
                             <tr>
                                 <th>编号</th>
@@ -164,25 +164,31 @@
                             <div class="table2" v-show="table2show">
                                 <table cellspacing="0">
                                     <tr>
-                                        <th>编号</th>
+                                        <th style="width: 5%;">新闻id</th>
                                         <th>标题</th>
                                         <th>摘要</th>
-                                        <th>图片</th>
-                                        <th>文章链接</th>
+                                        <th style="width: 30%;">图片</th>
+                                        <th style="width: 20%;">文章链接</th>
                                         <th>发布时间</th>
                                         <th>操作</th>
 
                                     </tr>
                                     <tr v-for="site in newsarr">
-                                        <td>{{site.pk}}</td>
-                                        <td>{{site.fields.passage_title}}</td>
+                                        <td style="text-align: center;">{{site.pk}}</td>
+                                        <td style="text-align: center;">{{site.fields.passage_title}}</td>
                                         <td>{{site.fields.passage_intro}}</td>
-                                        <td>{{site.fields.passage_photo}}</td>
-                                        <td>{{site.fields.passage_url}}</td>
+                                        <td><a :href="site.fields.passage_photo"
+                                                target="view_window">{{site.fields.passage_url}}</a>
+                                        </td>
+                                        <td><a :href="site.fields.passage_url"
+                                                target="view_window">{{site.fields.passage_url}}</a></td>
                                         <td>{{site.fields.gettimeform}}</td>
                                         <td>
                                             <div class="operate" href="">编辑 </div>
-                                            <div class="operate" href="" @click="passage_delete">删除 </div>
+                                            <div class="operate" href="" @click="passage_delete" :data-id="site.pk"
+                                                data-type="passage">
+                                                删除
+                                            </div>
                                             <div class="operate" href="">更多</div>
                                         </td>
                                     </tr>

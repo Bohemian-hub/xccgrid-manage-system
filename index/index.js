@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-12-22 11:10:57
- * @LastEditTime: 2021-01-01 20:50:11
+ * @LastEditTime: 2021-01-02 12:24:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /xccgrid manage system/index/index.js
@@ -20,7 +20,9 @@ var app = new Vue({
         newsarr: [],
         userarr: [],
         table2show: false,
-        warning1show: false
+        warning1show: false,
+        delete_id_now: '',
+        delete_type_now: ''
     },
     created: function () {
         //这里是页面加载的时候会执行的东西
@@ -165,13 +167,37 @@ var app = new Vue({
                 console.log(this.userarr);
             });
         },
-        passage_delete() {
-            console.log("删除");
+        passage_delete(e) {
+            console.log("确认删除？？");
+            this.delete_id_now = e.srcElement.dataset.id
+            this.delete_type_now = e.srcElement.dataset.type
             this.warning1show = true
         },
         delete_confirm() {
             //已经确定要删除了
             //下面调用删除函数对这个东西进行删除处理。
+            this.warning1show = false
+            axios({
+                method: 'POST',
+                url: "http://127.0.0.1:8000/passage/delete",
+                data: {
+                    delete_type: this.delete_type_now,
+                    delete_id: this.delete_id_now
+                },
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj) {
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    }
+                    return str.join("&");
+                }
+            }).then((res) => {
+                console.log(res.data);
+                alert("删除成功！")
+                this.passage_acquire()
+            });
+
 
         },
         delete_cancel() {

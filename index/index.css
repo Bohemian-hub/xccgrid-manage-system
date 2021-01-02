@@ -106,31 +106,33 @@ body{
     cursor:pointer
 
 }
-table > tbody > tr > th{
+.table1>table > tbody > tr > th{
     font-size: 15px;
     padding: 2px 31px;
     border: 1px solid rgb(148, 148, 148);
     background-color: rgb(209, 255, 255);
 }
-table > tbody > tr > td{
+.table1>table > tbody > tr > td{
     font-size: 10px;
     padding: 2px 7px;
     border: 1px solid rgb(124, 124, 124);
     background-color: rgb(209, 255, 255);
     text-align: center;
 }
+.table2>table{
+    width: 100%;
+}
 .table2>table > tbody > tr > th{
     font-size: 15px;
-    padding: 7px 40px;
     border: 1px solid rgb(148, 148, 148);
-    background-color: rgb(144, 221, 142);
+    background-color: rgb(136, 235, 132);
 }
 .table2 >table > tbody > tr > td{
     font-size: 10px;
-    padding: 2px 24px;
     border: 1px solid rgb(124, 124, 124);
     background-color: rgb(146, 230, 121);
-    text-align: center;
+    text-align: left;
+    word-break: break-all
 }
 .page_change{
     margin-left: 40%;
