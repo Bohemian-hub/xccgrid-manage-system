@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-22 11:05:04
- * @LastEditTime: 2021-01-02 13:07:42
+ * @LastEditTime: 2021-01-04 21:26:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /xccgrid manage system/index/index.html
@@ -12,14 +12,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../jsapi/vue.js"></script>
+    <script src="/static/jsapi/vue.js"></script>
     <!-- import stylesheet -->
-    <link rel="stylesheet" href="../cssapi/iview.css">
+    <link rel="stylesheet" href="/static/cssapi/iview.css">
     <!-- import iView -->
-    <script src="../jsapi/iview.min.js"></script>
-    <script src="../jsapi/axios.min.js"></script>
+    <script src="/static/jsapi/iview.min.js"></script>
+    <script src="/static/jsapi/axios.min.js"></script>
     <title>西院格子后台</title>
-    <link href="../index/index.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/index.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -96,19 +96,19 @@
                                 <th>操作</th>
                             </tr>
                             <tr v-for="(site,index) in userarr">
-                                <td>{{index+1}}</td>
-                                <td>{{site.fields.name}}</td>
-                                <td>{{site.pk}}</td>
-                                <td>{{site.fields.collegeName}}</td>
-                                <td>{{site.fields.majorName}}</td>
-                                <td>{{site.fields.className}}</td>
-                                <td>{{site.fields.phoneNumber}}</td>
-                                <td>{{site.fields.birthDay}}</td>
-                                <td>{{site.fields.graduationSchool}}</td>
-                                <td>{{site.fields.domicile}}</td>
-                                <td>{{site.fields.email}}</td>
-                                <td>{{site.fields.idNumber}}</td>
-                                <td>{{site.fields.updateTime}}</td>
+                                <td>[[index+1]]</td>
+                                <td>[[site.fields.name]]</td>
+                                <td>[[site.pk]]</td>
+                                <td>[[site.fields.collegeName]]</td>
+                                <td>[[site.fields.majorName]]</td>
+                                <td>[[site.fields.className]]</td>
+                                <td>[[site.fields.phoneNumber]]</td>
+                                <td>[[site.fields.birthDay]]</td>
+                                <td>[[site.fields.graduationSchool]]</td>
+                                <td>[[site.fields.domicile]]</td>
+                                <td>[[site.fields.email]]</td>
+                                <td>[[site.fields.idNumber]]</td>
+                                <td>[[site.fields.updateTime]]</td>
                                 <td>
                                     <div class="operate" href="">编辑 </div>
                                     <div class="operate" href="" @click="passage_delete">删除 </div>
@@ -165,25 +165,25 @@
                                 <table cellspacing="0">
                                     <tr>
                                         <th style="width: 5%;">新闻id</th>
-                                        <th>标题</th>
-                                        <th>摘要</th>
-                                        <th style="width: 30%;">图片</th>
+                                        <th style="width: 9%;">标题</th>
+                                        <th style="width: 25%;">摘要</th>
+                                        <th style="width: 25%;">图片</th>
                                         <th style="width: 20%;">文章链接</th>
-                                        <th>发布时间</th>
-                                        <th>操作</th>
+                                        <th style="width: 12%;">发布时间</th>
+                                        <th style="width: 4%;">操作</th>
 
                                     </tr>
                                     <tr v-for="site in newsarr">
-                                        <td style="text-align: center;">{{site.pk}}</td>
-                                        <td style="text-align: center;">{{site.fields.passage_title}}</td>
-                                        <td>{{site.fields.passage_intro}}</td>
+                                        <td style="text-align: center;">[[site.pk]]</td>
+                                        <td style="text-align: left;">[[site.fields.passage_title]]</td>
+                                        <td>[[site.fields.passage_intro]]</td>
                                         <td><a :href="site.fields.passage_photo"
-                                                target="view_window">{{site.fields.passage_url}}</a>
+                                                target="view_window">[[site.fields.passage_url]]</a>
                                         </td>
                                         <td><a :href="site.fields.passage_url"
-                                                target="view_window">{{site.fields.passage_url}}</a></td>
-                                        <td>{{site.fields.gettimeform}}</td>
-                                        <td>
+                                                target="view_window">[[site.fields.passage_url]]</a></td>
+                                        <td style="text-align: center;">[[site.fields.gettimeform]]</td>
+                                        <td style="text-align: center;">
                                             <div class="operate" href="">编辑 </div>
                                             <div class="operate" href="" @click="passage_delete" :data-id="site.pk"
                                                 data-type="passage">
@@ -222,7 +222,7 @@
 
 
 
-    <script src=" ../index/index.js"></script>
+    <script src="/static/js/index.js"></script>
 </body>
 
 </html>

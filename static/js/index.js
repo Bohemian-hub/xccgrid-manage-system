@@ -1,13 +1,14 @@
 /*
  * @Author: your name
  * @Date: 2020-12-22 11:10:57
- * @LastEditTime: 2021-01-02 12:24:52
+ * @LastEditTime: 2021-07-13 10:32:36
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /xccgrid manage system/index/index.js
  */
 var app = new Vue({
     el: "#app",
+    delimiters: ['[[', ']]'],
     data: {
         which_blue: 2,
         user_manage_show: false,
@@ -68,7 +69,7 @@ var app = new Vue({
             console.log(this.gettime);
             axios({
                 method: 'post',
-                url: "http://127.0.0.1:8000/passage/add_passage",
+                url: "https://www.xiyuangezi.cn/passage/add_passage",
                 data: {
                     passage_title: this.passage_title,
                     passage_intro: this.passage_intro,
@@ -127,7 +128,7 @@ var app = new Vue({
             //现在向服务器发送post请求
             axios({
                 method: 'POST',
-                url: "http://127.0.0.1:8000/passage/get_passage",
+                url: "https://www.xiyuangezi.cn/passage/get_passage",
                 data: {
                     num: 1
                 },
@@ -149,7 +150,7 @@ var app = new Vue({
         geruserlist() {
             axios({
                 method: 'POST',
-                url: "http://127.0.0.1:8000/info/getuser",
+                url: "https://www.xiyuangezi.cn/info/getuser",
                 data: {
                     num: 1
                 },
@@ -179,7 +180,7 @@ var app = new Vue({
             this.warning1show = false
             axios({
                 method: 'POST',
-                url: "http://127.0.0.1:8000/passage/delete",
+                url: "https://www.xiyuangezi.cn/passage/delete",
                 data: {
                     delete_type: this.delete_type_now,
                     delete_id: this.delete_id_now
